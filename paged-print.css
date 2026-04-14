@@ -1,0 +1,10 @@
+@media print {
+  @page {
+    size: A4;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}

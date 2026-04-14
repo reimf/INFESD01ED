@@ -1,0 +1,72 @@
+@media print {
+  #list-toc-generated { 
+    list-style: none;
+    overflow-x: hidden;
+  }
+  
+  .toc-element {
+    display: flex; 
+
+    &::after {
+      content: ".  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  ";
+      padding-left: 0.3rem;
+      white-space: pre;
+      width: 0;
+    }
+  }
+  
+  .toc-element a::after {
+    background-color: white;
+    content: "" target-counter(attr(href), page);
+    padding-left: 0.3rem;
+    position: absolute;
+    right: 0;
+  }
+  
+  #list-toc-generated .toc-element-level-1 {
+    margin-top: 1rem;
+  }
+  
+  #list-toc-generated .toc-element-level-2 {
+    margin-left: 2rem;
+  }
+  
+  #list-toc-generated .toc-element-level-3 {
+    margin-left: 4rem;
+  }
+  
+  /* counters */
+  
+  #list-toc-generated { 
+    counter-reset: counterTocLevel1; 
+  }
+  
+  .toc-element-level-1 { 
+    counter-increment: counterTocLevel1; 
+    counter-reset: counterTocLevel2; 
+  
+    &::before { 
+      content: counter(counterTocLevel1);
+      padding-right: 0.3rem;
+    }
+  }
+  
+  .toc-element-level-2 { 
+    counter-increment: counterTocLevel2; 
+    counter-reset: counterTocLevel3; 
+  
+    &::before { 
+      content: counter(counterTocLevel1) "." counter(counterTocLevel2);
+      padding-right: 0.3rem;
+    }
+  }
+  
+  .toc-element-level-3 { 
+    counter-increment: counterTocLevel3; 
+  
+    &::before { 
+      content: counter(counterTocLevel1) "." counter(counterTocLevel2) "." counter(counterTocLevel3);
+      padding-right: 0.3rem;
+    }
+  }
+} 

@@ -1,0 +1,32 @@
+body {
+  counter-reset: chapterLevel1;
+}
+
+h1 {
+  counter-increment: chapterLevel1;
+  counter-reset: chapterLevel2;
+
+  &::before {
+    content: counter(chapterLevel1);
+    padding-right: 0.5rem;
+  }
+}
+
+h2 {
+  counter-increment: chapterLevel2;
+  counter-reset: chapterLevel3;
+
+  &::before {
+    content: counter(chapterLevel1) "." counter(chapterLevel2);
+    padding-right: 0.5rem;
+  }
+}
+
+h3 {
+  counter-increment: chapterLevel3;
+
+  &::before {
+    content: counter(chapterLevel1) "." counter(chapterLevel2) "." counter(chapterLevel3);
+    padding-right: 0.5rem;
+  }
+}

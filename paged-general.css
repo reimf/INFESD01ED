@@ -1,0 +1,177 @@
+h1, h2, h3, .h {
+  color: #4F81BD;
+  font-weight: bold;
+}
+
+table {
+  border-collapse: collapse;
+  break-inside: avoid;
+  margin: 1rem 0;
+  width: 100%;
+
+  tfoot {
+    tr:first-child {
+      th {
+        border-top: 2px solid #000;
+      }
+    }
+  }
+
+  tr {
+    &.row-third {
+      td, th {
+        width: 33.33%;
+      }
+    }
+
+    &.table-subhead {
+      th {
+        font-style: italic;
+        font-weight: normal;
+      }
+    }
+
+    th {
+      background-color: #EEE;
+    }
+
+    td, th {
+      border: 1px solid #ccc;
+      padding: 0.2rem;
+      vertical-align: top;
+
+      &.cell-fill {
+        background-color: #EEF;
+        border: 2px solid #000;
+        height: 1.2rem;
+        width: 6rem;
+      }
+
+      &.cell-left {
+        text-align: left;
+      }
+
+      &.cell-middle {
+        vertical-align: middle;
+      }
+
+      &.cell-narrow {
+        width: 40%;
+      }
+
+      &.cell-right {
+        text-align: right;
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 1rem;
+      }
+    }
+  }
+}
+
+.front-page {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+}
+
+.front-intro {
+  display: flex;
+  flex-direction: row;
+  gap: 2vh;
+}
+
+.front-logo {
+  height: 15vh;
+  width: 15vh;
+}
+
+.front-quote-content {
+  color: #CC0033;
+  font-style: italic;
+}
+
+.front-quote-author {
+  color: #999;
+  text-align: right;
+}
+
+.front-maintitle {
+  border-bottom: 0.1rem solid #999;
+  color: #1F497D;
+  font-size: 4rem;
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
+.front-subtitle {
+  color: #1F497D;
+  font-size: 1.2rem;
+  margin: 0;
+  padding-top: 1rem;
+  text-transform: uppercase;
+}
+
+.front-info {
+  border-bottom: 1rem solid #4F81BD;
+}
+
+.front-footer {
+  background-color: #CC0033;
+  color: #FFF;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 -3rem;
+}
+
+.front-footer-text {
+  padding: 1rem 4rem;
+}
+
+.front-footer-text-authors {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.front-footer-text-institute {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.front-footer-logo {
+  height: 7vh;
+  width: 7vh;
+}
+
+.graduation-good::before {
+  content: "⭐";
+  font-size: 80%;
+  padding-right: 0.2rem;
+}
+
+.graduation-sufficient::before {
+  color: green;
+  content: "✔";
+  font-size: 120%;
+  padding-right: 0.2rem;
+}
+
+.graduation-insufficient::before {
+  content: "❌";
+  font-size: 80%;
+  padding-right: 0.2rem;
+}
+
+hr {
+  break-before: page;
+  display: none;
+}
+
+@page {
+  @bottom-right {
+    content: counter(page);
+  }
+}

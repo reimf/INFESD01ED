@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Modulehandleiding</title>
+    <script src="paged-polyfill.js"></script>
+    <script src="paged-create-toc.js"></script>
+    <script src="paged-handler.js"></script>
+    <script src="paged-reload-in-place.js"></script>
+    <link href="paged-interface.css" rel="stylesheet" type="text/css" />
+    <link href="paged-interface-override.css" rel="stylesheet" type="text/css" />
+    <link href="paged-general.css" rel="stylesheet" type="text/css" />
+    <link href="paged-print.css" rel="stylesheet" type="text/css" />
+    <link href="paged-counters.css" rel="stylesheet" type="text/css" />
+    <link href="paged-toc.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <article id="content">
+      <div class="front-page">
+        <div class="front-intro">
+          <img class="front-logo" src="logo-teaching-tech-and-team.png" alt="Logo Teaching Tech &amp; Team">
+          <quote class="front-quote">
+            <div class="front-quote-content">
+              When you grow up, you tend to get told that the world is the way it is and your life is just to live your life inside the world, try not to bash into the walls too much, try to have a nice family, have fun, save a little money. That's a very limited life. Life can be much broader, once you discover one simple fact, and that is that everything around you that you call "life" was made up by people that were no smarter than you. And you can change it, you can influence it, you can build your own things that other people can use. Once you learn that, you'll never be the same again.
+            </div>
+            <div class="front-quote-author" rel="author">Steve Jobs</div>
+          </quote>
+        </div>
+        <div class="front-title">
+          <p class="front-maintitle">Modulehandleiding</p>
+          <p class="front-subtitle">monodisciplinair traject - teaching tech &amp; team</p>
+        </div>
+        <div class="front-info">
+          <p>Explorative Software Development in Education - <em>Semester 6</em></p>
+          <p>Code: INFESD01ED</p>
+          <p>Studiejaar: 2025-2026</p>
+          <p>ECTS: 30</p>
+          <p>Datum: 30-01-2026</p>
+        </div>
+        <div class="front-footer">
+          <div class="front-footer-text">
+            <p class="front-footer-text-authors">
+              <span rel="author">Frans Reijnhoudt (reimf)</span>
+              en
+              <span rel="author">Jeanine Stout (stojd)</span>
+            </p>
+            <p class="front-footer-text-institute">
+              Hogeschool Rotterdam | Informatica
+            </p>
+          </div>
+          <img class="front-footer-logo" src="logo-hogeschool-rotterdam.png" alt="Logo Hogeschool Rotterdam">
+        </div>
+      </div>
+
+      <hr>
+
+      <div>
+        <div class="h">Inhoudsopgave</div>
+        <div id="toc"></div>
+      </div>
+
+      <hr>
+      
+      <h1 id="de-opdracht">De opdracht</h1>
+
+      <h2>Introductie</h2>
+      <p>Een spin-off van de TU Delft heeft een digitaal platform ontwikkeld voor leerlingen in de bovenbouw van het basisonderwijs of de onderbouw van het voortgezet onderwijs: EduvolutionX. Docenten kunnen dit platform als tool inzetten om leerlingen technische vaardigheden te laten ontwikkelen. Het platform bestaat uit de volgende onderdelen:</p>
+      <ul>
+        <li>Een editor om lessen te maken om iets te bouwen</li>
+        <li>Een editor om een computerprogramma bij elkaar te klikken</li>
+        <li>Een editor om lessen te maken om een Arduino te koppelen</li>
+        <li>Een omgeving om lessen te volgen</li>
+      </ul>
+      <p>Vanaf half <time datetime="2026-02">februari 2026</time> wordt het platform gebruikt op een aantal deelnemende scholen.</p>
+
+      <h2>De opdracht</h2>
+      <p>Samen met jouw projectteam ga jij het digitale platform verbeteren zodat leerlingen niet alleen technische vaardigheden leren, maar ook ontdekken dat effectieve communicatie en samenwerking essentieel zijn om tot goede technische oplossingen te komen.</p>
+      <p>Je doet dit door als team onderdelen van het platform te "hacken" (creatief hergebruiken) en nieuwe onderdelen te ontwerpen en realiseren die leerlingen stimuleren om samen te werken, kennis te delen en gezamenlijke keuzes te maken tijdens het leren van technische vaardigheden. Tijdens deze opdracht werk je intensief samen binnen je projectteam en ontwikkel je bewust je samenwerkingsvaardigheden; dit vormt een expliciet onderdeel van het leerproces.</p>
+
+      <div class="h">Het vertrekpunt</div>
+      <p>Het platform is al ontwikkeld. Jullie werken daarom met bestaande software, waarvoor jullie volledige toegang krijgen. Daarnaast kun je inloggen als leerling, zodat je het platform ook vanuit het perspectief van de gebruiker kunt ervaren. Als projectteam bepalen jullie zelf welke elementen jullie verder willen ontwerpen en realiseren. Binnen deze opdracht kies je zelf persoonlijke leerpunten waarop je je gedurende het project wilt ontwikkelen in de samenwerking.</p>
+
+      <hr>
+
+      <h1>Leeruitkomsten</h1>
+      <p>In dit vak werk je aan twee leeruitkomsten die centraal staan binnen het project.</p>
+
+      <h2>Goed samenwerken</h2>
+      <p>De student toont aan effectief, professioneel en bewust samen te werken binnen een softwareontwikkelteam, waarbij professionele keuzes voortkomen uit afstemming met het team, reflectie op het eigen handelen en het omgaan met onderlinge verschillen, en leiden tot heldere communicatie, gezamenlijke kwaliteit en voortdurende ontwikkeling.</p>
+
+      <h2>Goede software bouwen</h2>
+      <p>De student toont aan op gestructureerde en onderbouwde wijze software te kunnen ontwerpen en realiseren, waarbij technische keuzes voortkomen uit een zorgvuldige analyse van requirements, beargumenteerd worden door het afwegen van alternatieven, zijn afgestemd met de opdrachtgever en leiden tot een duurzaam, kwalitatief, onderhoudbaar en uitbreidbaar softwareproduct.</p>
+
+      <h1>Werkwijze en ondersteuning</h1>
+
+      <h2>Opzet van het vak</h2>
+      <p>Dit vak heeft een omvang van 30 studiepunten (840 uur) en loopt gedurende 20 weken. Het betreft een voltijdsmodule, wat neerkomt op gemiddeld ruim 40 uur per week. In onze visie houden wij de praktijk aan als voorbeeld en verwachten wij dat je op werktijden en -dagen geen andere werkzaamheden verricht. Je werkt gedurende het vak samen in een projectteam van ongeveer vijf studenten. In de eerste weken werk je daarnaast deels individueel, zodat je een goede basis kunt leggen voordat het project volledig teamgericht wordt.</p>
+
+      <h2>Werkwijze</h2>
+      <p>We werken met een vaste weekstructuur die gebaseerd is op de manier van werken uit de praktijk.</p>
+      <ul>
+        <li>
+          De module bestaat uit sprints van één week.
+          <ul>
+            <li>Iedere sprint bevat een sprint review, retrospective en sprint planning.</li>
+            <li>Per sprint kies je individueel én als team een ontwikkelpunt om op te focussen.</li>
+          </ul>
+        </li>
+        <li>Iedere week is er ruimte voor het lezen en bespreken van de literatuur</li>
+        <li>Er zijn vaste momenten voor het vragen van feedback op specifieke onderdelen.</li>
+      </ul>
+
+      <hr>
+      
+      <h3 id="voorbeeld-van-een-weekindeling">Voorbeeld van een weekindeling</h3>
+      <p>De exacte inhoud van de weekindeling bepalen we samen. De kaders staan vast, maar de invulling kan per week verschillen. Onderstaand schema is een voorbeeld.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Dag</th>
+            <th>Ochtend</th>
+            <th>Middag</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Maandag   op locatie</td>
+            <td>Activiteit over het bevorderen van samenwerken</td>
+            <td>In team werken aan het verfijnen van requirements</td>
+          </tr>
+          <tr>
+            <td>Dinsdag   op locatie/online</td>
+            <td>In team werken aan uitbreiden van testplan</td>
+            <td>In team werken aan schrijven en goedkeuren van code</td>
+          </tr>
+          <tr>
+            <td>Woensdag   op locatie</td>
+            <td>Hoofdstuk 5 van boek lezen en bespreken met medestudenten</td>
+            <td>Instructie over test-driven development</td>
+          </tr>
+          <tr>
+            <td>Donderdag   op locatie/online</td>
+            <td>Benaderen middelbare-schooldocenten voor uitvoeren testen</td>
+            <td>Advies schrijven voor bibliotheek om grafieken te tonen</td>
+          </tr>
+          <tr>
+            <td>Vrijdag   op locatie</td>
+            <td>Sprint review, sprint retrospective &amp; sprint planning</td>
+            <td>Logboek bijwerken en verder schrijven aan betekenisvolle momenten</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Aanwezigheid</h2>
+      <p>Aanwezigheid is zowel verplicht als vanzelfsprekend. In ieder geval ben je drie dagen per week op locatie aanwezig: maandag, woensdag en vrijdag. De overige dagen kunnen op locatie of online plaatsvinden, afhankelijk van de afspraken binnen het team en het type werkzaamheden.</p>
+      <p>Ook op online dagen moet zichtbaar zijn wat je hebt gedaan, zowel voor je projectteam als voor de docenten (bijvoorbeeld via een scrumboard, documentatie of git).</p>
+
+      <h2>Werktijden</h2>
+      <p>We stimuleren jullie om je tijd en energie goed te managen en weekenden bij voorkeur vrij te houden. Daarom werken we, net als in de praktijk, met flexibele start- en eindtijden, met vaste tijdstippen gedurende de dag.</p>
+      <table>
+        <tbody>
+          <tr>
+            <th class="cell-left">Begin</th>
+            <td>09:00 - 10:00</td>
+            <td>Mogelijkheid tot stand-up met team en vragen aan technisch docent</td>
+          </tr>
+          <tr>
+            <th class="cell-left">Start</th>
+            <td>10:15 - 10:30</td>
+            <td>Bespreken van het dagplan met de hele klas</td>
+          </tr>
+          <tr>
+            <th class="cell-left">Lunch</th>
+            <td>12:30 - 13:30</td>
+            <td></td>
+          </tr>
+          <tr>
+            <th class="cell-left">Einde</th>
+            <td>15:00 - 17:00</td>
+            <td>
+              Je mag ergens anders verder werken als:
+              <ul>
+                <li>taken zichtbaar zijn (scrumboard / planning)</li>
+                <li>gemaakte afspraken zijn nagekomen</li>
+                <li>het team hierdoor niet wordt opgehouden</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr>
+      
+      <h2 id="ondersteuning">Ondersteuning</h2>
+      <p>In dit vak zijn er per werkweek van 40 uur in elk geval 16 contacturen met de docenten. Gedurende het vak bieden zij verschillende workshops aan, bespreken we gezamenlijk literatuur en is er veel ruimte voor vragen, coaching en overleg. Zowel individuele als groepsbegeleiding maken hier onderdeel van uit. Daarnaast heb je op meerdere momenten contact met de externe opdrachtgever.</p>
+
+      <h2>Weekplanning</h2>
+      <p>De exacte inhoud van de weekplanning kan gedurende de tijd nog veranderen. De kaders staan vast, maar de invulling kan per week verschillen.</p>
+      <table>
+        <thead>
+          <tr>
+            <th class="cell-right">Datum</th>
+            <th class="cell-left">Week</th>
+            <th class="cell-left">Leeruitkomst 1</th>
+            <th class="cell-left">Leeruitkomst 2</th>
+            <th class="cell-left">Literatuur</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="cell-right">9 - 13 feb</td>
+            <td>3.01</td>
+            <td>Intro samenwerken</td>
+            <td>Intro platform</td>
+            <td>Intro boek</td>
+          </tr>
+          <tr>
+            <td class="cell-right">16 - 20 feb</td>
+            <td>xxxx</td>
+            <td colspan="3">voorjaarsvakantie</td>
+          </tr>
+          <tr>
+            <td class="cell-right">23 - 27 feb</td>
+            <td>3.02</td>
+            <td>Doel &amp; organisatie</td>
+            <td>Les maken</td>
+            <td>Topic 1-3</td>
+          </tr>
+          <tr>
+            <td class="cell-right">2 - 6 mrt</td>
+            <td>3.03</td>
+            <td>Communicatie &amp; afstemming</td>
+            <td>Architectuur</td>
+            <td>Topic 4-7</td>
+          </tr>
+          <tr>
+            <td class="cell-right">9 - 13 mrt</td>
+            <td>3.04</td>
+            <td>Omgaan met verschillen</td>
+            <td>Kleine aanpassing</td>
+            <td>Topic 8-10</td>
+          </tr>
+          <tr>
+            <td class="cell-right">16 - 20 mrt</td>
+            <td>3.05</td>
+            <td>Reflectie &amp; ontwikkeling</td>
+            <td>Ideeën</td>
+            <td>Topic 11-13</td>
+          </tr>
+          <tr>
+            <td class="cell-right">23 - 27 mrt</td>
+            <td>3.06</td>
+            <td>Samenwerking in de praktijk</td>
+            <td>Klikbaar prototype</td>
+            <td>Topic 14-17</td>
+          </tr>
+          <tr>
+            <td>30 mrt - 2 apr</td>
+            <td>3.07</td>
+            <td>Samenwerking in de praktijk</td>
+            <td>Starten analyse + testplan</td>
+            <td>Topic 18-22</td>
+          </tr>
+          <tr>
+            <td class="cell-right">6 - 10 apr</td>
+            <td>3.08</td>
+            <td>Samenwerking in de praktijk</td>
+            <td>Starten advies + ontwerp</td>
+            <td>Topic 23-25</td>
+          </tr>
+          <tr>
+            <td class="cell-right">13 - 17 apr</td>
+            <td>3.09</td>
+            <td>Samenwerking in de praktijk</td>
+            <td>Starten realiseren</td>
+            <td>Topic 26-28</td>
+          </tr>
+          <tr>
+            <td class="cell-right">20 - 24 apr</td>
+            <td>3.10</td>
+            <td>Samenwerking in de praktijk</td>
+            <td>Teamwerk</td>
+            <td>Topic 29-30</td>
+          </tr>
+          <tr>
+            <td>27 apr - 1 mei</td>
+            <td>xxxx</td>
+            <td colspan="3">meivakantie</td>
+          </tr>
+          <tr>
+            <td class="cell-right">4 - 8 mei</td>
+            <td>4.01</td>
+            <td>Samenwerking in de praktijk</td>
+            <td>Tussenpresentatie</td>
+            <td>Topic 31-34</td>
+          </tr>
+          <tr>
+            <td class="cell-right">11 - 15 mei</td>
+            <td>4.02</td>
+            <td>Samenwerking in de praktijk</td>
+            <td>Teamwerk</td>
+            <td>Topic 35-38</td>
+          </tr>
+          <tr>
+            <td class="cell-right">18 - 22 mei</td>
+            <td>4.03</td>
+            <td>Samenwerking in de praktijk</td>
+            <td>Teamwerk</td>
+            <td>Topic 39-41</td>
+          </tr>
+          <tr>
+            <td class="cell-right">25 - 29 mei</td>
+            <td>4.04</td>
+            <td>Samenwerking in de praktijk</td>
+            <td>Teamwerk</td>
+            <td>Topic 42-44</td>
+          </tr>
+          <tr>
+            <td class="cell-right">1 - 5 jun</td>
+            <td>4.05</td>
+            <td>Samenwerking in de praktijk</td>
+            <td>Gebruikersacceptatietest</td>
+            <td>Topic 45-48</td>
+          </tr>
+          <tr>
+            <td class="cell-right">8 - 12 jun</td>
+            <td>4.06</td>
+            <td>Samenwerking in de praktijk</td>
+            <td>Teamwerk</td>
+            <td>Topic 49-53</td>
+          </tr>
+          <tr>
+            <td class="cell-right">15 - 19 jun</td>
+            <td>4.07</td>
+            <td>Samenwerking in de praktijk</td>
+            <td>Teamwerk</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="cell-right">22 - 26 jun</td>
+            <td>4.08</td>
+            <td>Assessments</td>
+            <td>Eindpresentaties</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="cell-right">29 jun - 3 jul</td>
+            <td>4.09</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="cell-right">6 - 10 jul</td>
+            <td>4.10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="cell-right">13 - 17 jul</td>
+            <td>4.11</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Praktische randvoorwaarden</h2>
+
+      <h3>Ingangseisen</h3>
+      <ul>
+        <li>De student heeft de propedeutische fase behaald</li>
+        <li>De student heeft 44 studiepunten uit jaar 2 behaald</li>
+      </ul>
+
+      <h3>Studiebelasting</h3>
+      <p>Deze minor levert 30 studiepunten (ECTs) op, wat overeenkomst met een studielast van 840 uur. De verdeling van de uren is als volgt:</p>
+      <table>
+        <tbody>
+          <tr>
+            <td>Instructie en begeleiding op locatie</td>
+            <td>18 weken × 18 uur per week</td>
+            <td class="cell-right">324 uur</td>
+          </tr>
+          <tr>
+            <td>Zelfstandig werken aan project</td>
+            <td>18 weken × 16 uur per week</td>
+            <td class="cell-right">288 uur</td>
+          </tr>
+          <tr>
+            <td>Lezen literatuur</td>
+            <td>16 weken × 6 uur per week</td>
+            <td class="cell-right">96 uur</td>
+          </tr>
+          <tr>
+            <td>Opbouw documentatie</td>
+            <td>18 weken × 7 uur per week</td>
+            <td class="cell-right">126 uur</td>
+          </tr>
+          <tr>
+            <td>Individueel assessment</td>
+            <td>2 uur eenmalig</td>
+            <td class="cell-right">2 uur</td>
+          </tr>
+          <tr>
+            <td>Eindpresentatie</td>
+            <td>4 uur eenmalig</td>
+            <td class="cell-right">4 uur</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Cursushouders</h3>
+      <p>Frans Reijnhoudt (<a href="mailto:reimf@hr.nl">reimf@hr.nl</a> ) en Jeanine Stout (<a href="mailto:stojd@hr.nl">stojd@hr.nl</a> )</p>
+
+      <h3>Verplichte literatuur</h3>
+      <p>
+        Boek: "The Pragmatic Programmer" van Davis Thomas &amp; Andrew Hunt<br>
+        LET OP: koop de "20th anniversary edition"<br>
+        Bijvoorbeeld te verkrijgen op <a href="https://www.bol.com/nl/nl/f/the-pragmatic/9200000033027844/">https://www.bol.com/nl/nl/f/the-pragmatic/9200000033027844/</a>
+      </p>
+
+      <h3>Klachtenprocedure</h3>
+      <p>Zie Hogeschoolgids.</p>
+
+      <hr>
+      
+      <h1 id="op-te-leveren-producten">Op te leveren producten</h1>
+      <p>Voor dit vak lever je twee eindproducten in.</p>
+      <ul>
+        <li>Individueel: jouw leerreis</li>
+        <li>Projectteam: de volledige technische documentatie</li>
+      </ul>
+      <p>Voor beide verslagen is er een format waaraan je je dient te houden voor de hoofdstukindeling. Je levert de documentatie in op Brightspace.</p>
+
+      <h2>Individueel verslag: jouw leerreis</h2>
+      <p>Voor de beoordeling op leeruitkomst 1 maakt iedere student een document met de volgende onderdelen:</p>
+      <ul>
+        <li>Wekelijkse focuspunten</li>
+        <li>Drie betekenisvolle leermomenten</li>
+        <li>Peer feedback</li>
+      </ul>
+
+      <h2>Teamverslag: technische documentatie</h2>
+      <p>Voor de beoordeling op leeruitkomst 2 maakt elk team een document met de volgende onderdelen:</p>
+      <ul>
+        <li>
+          Procesdocumentatie
+          <ul>
+            <li>Een puntsgewijs overzicht per sprint waar aan is gewerkt (reviews)</li>
+            <li>Een puntsgewijs overzicht per sprint welke procesverbeteringen zijn gepland, doorgevoerd en gereviewed (retrospectives)</li>
+          </ul>
+        </li>
+        <li>
+          Technische documentatie
+          <ul>
+            <li>
+              Analyse
+              <ul>
+                <li>De gemaakte lessen</li>
+                <li>Kleine aanpassingen aan de bestaande software</li>
+                <li>Ideeën ter bevordering van samenwerking van leerlingen</li>
+                <li>Jullie aanpassing met functionele en niet-functionele requirements</li>
+              </ul>
+            </li>
+            <li>Advies<ul>
+              <li>Advies over technologische keuzes</li>
+            </ul>
+            </li>
+            <li>
+              Ontwerp
+              <ul>
+                <li>De architectuur van de bestaande software</li>
+                <li>Architectuur van jullie aanpassing</li>
+                <li>Klikbaar prototype</li>
+                <li>Testplan</li>
+              </ul>
+            </li>
+            <li>
+              Realisatie
+              <ul>
+                <li>Code van jullie aanpassing</li>
+                <li>Gerealiseerde code</li>
+                <li>Testrapport</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <hr>
+      
+      <h2 id="wat-wordt-hoe-getoetst">Wat wordt hoe getoetst</h2>
+      <table>
+        <thead>
+          <tr>
+            <th class="cell-narrow">Leeruitkomst</th>
+            <th>Rubric onderdelen</th>
+            <th>Bewijs (producten &amp; gedrag)</th>
+          </tr>
+        </thead>
+        <tbody
+          <tr>
+            <td rowspan="5">
+              <strong>Goed samenwerken</strong>
+              <br>
+              De student toont aan effectief, professioneel en bewust samen te werken binnen een softwareontwikkelteam, waarbij professionele keuzes voortkomen uit afstemming met het team, reflectie op het eigen handelen en het omgaan met onderlinge verschillen, en leiden tot heldere communicatie, gezamenlijke kwaliteit en voortdurende ontwikkeling.
+            </td>
+            <td>Samen&shy;werkings&shy;mindset &amp; eigenaar&shy;schap</td>
+            <td>
+              <ul>
+                <li>Docent-observaties</li>
+                <li>Peerfeedback (gestructureerd)</li>
+                <li>Assessment</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>Dagelijkse afstemming&amp; werkcoördinatie</td>
+            <td>
+              <ul>
+                <li>Lezen van git-log</li>
+                <li>Proces documentatie</li>
+                <li>Peerfeedback</li>
+                <li>Docentobservaties assessment</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>Inhoudelijke communicatie &amp; gedeeld begrip</td>
+            <td>
+              <ul>
+                <li>Docent observaties</li>
+                <li>Peerfeedback</li>
+                <li>assessment</li>
+                <li>Eventueel: Individueel leerreisverslag</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>Omgaan met verschillen&amp; spanningen</td>
+            <td>
+              <ul>
+                <li>Docent observaties</li>
+                <li>assessment</li>
+                <li>Eventueel: Individueel leerreisverslag</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>Reflectie &amp; ontwikkeling</td>
+            <td>
+              <ul>
+                <li>Individueel leerreisverslag</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td rowspan="4">
+              <strong>Goed Bouwen</strong>
+              <br>
+              De student toont aan op gestructureerde en onderbouwde wijze software te kunnen ontwerpen en realiseren, waarbij technische keuzes voortkomen uit een zorgvuldige analyse van requirements, beargumenteerd worden door het afwegen van alternatieven, zijn afgestemd met de opdrachtgever en leiden tot een duurzaam, kwalitatief, onderhoudbaar en uitbreidbaar softwareproduct.
+            </td>
+            <td>Analyseren</td>
+            <td>
+              <ul>
+                <li>SRS / backlog</li>
+                <li>Stakeholderafstemming (notities / feedback)</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>Adviseren</td>
+            <td>
+              <ul>
+                <li>Selectie van alternatieven</li>
+                <li>Criteria voor vergelijking</li>
+                <li>Argumentatie voor keuzes</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>Ontwerpen</td>
+            <td>
+              <ul>
+                <li>Architectuur</li>
+                <li>Diagrammen</li>
+                <li>Testplan</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>Realiseren</td>
+            <td>
+              <ul>
+                <li>Werkende software</li>
+                <li>Codekwaliteit</li>
+                <li>Uitgevoerde tests</li>
+                <li>Git-history</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr>
+      
+      <h2 id="inleverdata">Inleverdata</h2>
+      <ul>
+        <li>Het inleveren van de technische documentatie is op <time datetime="2026-06-19T17:00">vrijdag 19 juni 2026 17:00.</time></li>
+        <li>Het inleveren van het individuele leerreisverslag is op <time datetime="2026-06-19T23:59">vrijdag 19 juni 2026 23:59.</time></li>
+        <li>De individuele assessments worden gehouden in de week van <time datetime="2026-06-22">22 juni 2026</time>.</li>
+        <li>De eindpresentaties plannen jullie zelf in, in afstemming met de opdrachtgever.</li>
+      </ul>
+
+      <h1>Beoordeling &amp; toetsing</h1>
+
+      <h2>Beoordelingsprocedure</h2>
+      <p>
+        De beoordeling is gebaseerd op het individuele reisverslag, de technische documentatie en een individueel assessment (30 min). De beoordeling bestaat uit twee leeruitkomsten die elk voor 50% meetellen. Bij beide leeruitkomsten word je per onderdeel beoordeeld door middel van een 3-punts schaal:
+        <span class="graduation-insufficient">Onvoldoende</span> (0 punten),
+        <span class="graduation-sufficient">Voldoende</span> (2 punten),
+        <span><span class="graduation-good">Goed</span></span> (3 punten).
+      </p>
+
+      <hr>
+      
+      <h2>Toetsmatrijs</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Leeruitkomst</th>
+            <th>Weging</th>
+            <th>Compe&shy;tentie</th>
+            <th>Niveau</th>
+            <th>Rubric onderdeel</th>
+            <th>Weging</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="5">
+              <strong>Goed Samenwerken</strong><br>
+              De student toont aan effectief, professioneel en bewust samen te werken binnen een softwareontwikkelteam, waarbij professionele keuzes voortkomen uit afstemming met het team, reflectie op het eigen handelen en het omgaan met onderlinge verschillen, en leiden tot heldere communicatie, gezamenlijke kwaliteit en voortdurende ontwikkeling.
+            </td>
+            <td rowspan="5">50%</td>
+            <td rowspan="5">Profes&shy;sional skills + Manage &amp; control</td>
+            <td rowspan="5"><strong>Miller - Does</strong> (handelt professioneel in authentieke projectsituatie)</td>
+            <td>Samenwerkings-mindset &amp; eigenaarschap</td>
+            <td>10%</td>
+          </tr>
+          <tr>
+            <td>Dagelijkse afstemming &amp; werkcoördinatie</td>
+            <td>10%</td>
+          </tr>
+          <tr>
+            <td>Inhoudelijke communicatie &amp; gedeeld begrip</td>
+            <td>10%</td>
+          </tr>
+          <tr>
+            <td>Omgaan met verschillen &amp; spanningen</td>
+            <td>10%</td>
+          </tr>
+          <tr>
+            <td>Reflectie &amp; ontwikkeling</td>
+            <td>10%</td>
+          </tr>
+          <tr>
+            <td rowspan="4">
+              <strong>Goed bouwen</strong><br>
+              De student toont aan op gestructureerde en onderbouwde wijze software te kunnen ontwerpen en realiseren, waarbij technische keuzes voortkomen uit een zorgvuldige analyse van requirements, beargumenteerd worden door het afwegen van alternatieven, zijn afgestemd met de opdrachtgever en leiden tot een duurzaam, kwalitatief, onderhoudbaar en uitbreidbaar softwareproduct.
+            </td>
+            <td rowspan="4">50%</td>
+            <td rowspan="4">Analyseren + Ontwerpen + Realiseren + Adviseren</td>
+            <td rowspan="4"><strong>Miller - Does</strong> (past tech&shy;nische expertise toe in beroeps&shy;context)</td>
+            <td>Analyseren</td>
+            <td>10%</td>
+          </tr>
+          <tr>
+            <td>Adviseren</td>
+            <td>10%</td>
+          </tr>
+          <tr>
+            <td>Ontwerpen</td>
+            <td>10%</td>
+          </tr>
+          <tr>
+            <td>Realiseren</td>
+            <td>20%</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr>
+      
+      <h2>Beoordelingscriteria</h2>
+      <p>De rubric met de volledige beoordelingscriteria is te vinden in <a href="#bijlage-2">Bijlage 2: Rubric - Beoordelingscriteria</a>.</p>
+
+      <h3>Cesuur</h3>
+      <p>De rubric is opgebouwd uit leeruitkomsten, hoofdthema's en subcriteria. De subcriteria dienen als richtinggevende indicatoren voor professioneel en technisch handelen.</p>
+      <p>De beoordeling vindt plaats op basis van een holistisch oordeel per rubriconderdeel. Hierbij wordt gekeken naar het totaalbeeld van het gedrag en de producten gedurende het project. De subcriteria helpen bij het onderbouwen van het oordeel, maar worden niet afzonderlijk beoordeeld of afgevinkt.</p>
+      <p>Het is niet vereist dat aan alle subcriteria wordt voldaan om het niveau <em class="graduation-sufficient">Voldoende</em> of <em class="graduation-good">Goed</em> te behalen. Bij de beoordeling wordt ook gekeken naar consistentie, ontwikkeling gedurende het project en de impact van het handelen op het team en het gezamenlijke resultaat. Op basis hiervan geldt de volgende richtlijn voor de beoordeling.</p>
+      <table>
+        <thead>
+          <tr class="row-third">
+            <th class="graduation-good">Goed</th>
+            <th class="graduation-sufficient">Voldoende</th>
+            <th class="graduation-insufficient">Onvoldoende</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>De student laat consistent, bewust en zelfstandig professioneel handelen zien.</td>
+            <td>De student laat in het geheel gedrag zien dat past bij het niveau voldoende.</td>
+            <td>De student laat op één of meer gebieden ondermijnend gedrag zien.</td>
+          </tr>
+          <tr>
+            <td>
+              <ul>
+                <li>subcriteria zijn grotendeels zichtbaar</li>
+                <li>gedrag is proactief</li>
+                <li>keuzes worden onderbouwd</li>
+                <li>impact op team is positief</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>meerdere subcriteria zichtbaar</li>
+                <li>sommige nog wisselend of in ontwikkeling</li>
+                <li>geen structureel belemmerend gedrag</li>
+              </ul>
+            </td>
+            <td>
+              <ul>
+                <li>structureel belemmerend gedrag</li>
+                <li>gebrek aan eigenaarschap</li>
+                <li>onvoldoende afstemming</li>
+                <li>communicatie of houding die samenwerking schaadt</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>Het handelen is niet perfect, maar stevig en passend bij het niveau van een beginnend professional.</td>
+            <td>Het totaalbeeld is professioneel en toereikend genoeg voor het niveau van een derdejaars student.</td>
+            <td>Ook wanneer andere subcriteria wel zichtbaar zijn, kan één structureel ondermijnend patroon ertoe leiden dat het totaalbeeld als onvoldoende wordt beoordeeld.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr>
+      
+      <h3 id="eindbeoordeling">Eindbeoordeling</h3>
+      <p>De eindbeoordeling wordt op de volgende manier berekend.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Rubric onderdeel</th>
+            <th>Beoordeling</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Samenwerkingsmindset &amp; eigenaarschap</td>
+            <td class="cell-fill"></td>
+          </tr>
+          <tr>
+            <td>Dagelijkse afstemming &amp; werkcoördinatie</td>
+            <td class="cell-fill"></td>
+          </tr>
+          <tr>
+            <td>Inhoudelijke communicatie &amp; gedeeld begrip</td>
+            <td class="cell-fill"></td>
+          </tr>
+          <tr>
+            <td>Omgaan met verschillen &amp; spanningen</td>
+            <td class="cell-fill"></td>
+          </tr>
+          <tr>
+            <td>Reflectie &amp; ontwikkeling</td>
+            <td class="cell-fill"></td>
+          </tr>
+          <tr>
+            <td>Analyseren</td>
+            <td class="cell-fill"></td>
+          </tr>
+          <tr>
+            <td>Adviseren</td>
+            <td class="cell-fill"></td>
+          </tr>
+          <tr>
+            <td>Ontwerpen</td>
+            <td class="cell-fill"></td>
+          </tr>
+          <tr>
+            <td rowspan="2">
+              Realiseren<br>
+              <em>(2 keer dezelfde beoordeling noteren, want dit rubric onderdeel telt dubbel)</em>
+            </td>
+            <td class="cell-fill"></td>
+          </tr>
+          <tr>
+            <td class="cell-fill"></td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th class="cell-right">Opgeteld</th>
+            <th class="cell-fill"></th>
+          </tr>
+          <tr>
+            <th></th>
+            <th>/ 3 =</th>
+          </tr>
+          <tr>
+            <th class="cell-right">Eindbeoordeling</th>
+            <th class="cell-fill"></th>
+          </tr>
+        </tfoot>
+      </table>
+      <p>De student ontvangt de 30 ECT als de eindbeoordeling 5,5 of hoger is.</p>
+
+      <h2>Herkansing</h2>
+      <p>Als je beoordeling lager is dan 5,5, dan wordt een herkansing gepland in de weken voor de zomervakantie. De inhoud van de herkansing wordt bepaald op basis van de feedback op de eindbeoordeling.</p>
+
+      <h2>Gebruik van AI</h2>
+      <p>AI is een hulpmiddel dat je kunt gebruiken om bepaalde onderwerpen aan je te laten uitleggen of om je op weg te helpen met ideeën. Let er wel op dat je nooit teksten die door AI worden gegenereerd zomaar gebruikt. Lang niet alles is even betrouwbaar. Jij bent verantwoordelijk voor wat je schrijft en gebruikt, dus controleer altijd de output van AI, door bijvoorbeeld de bronnen te lezen en te controleren. Let er ook op dat AI vaak algemene teksten produceert en daardoor niet specifiek ingaat op een bepaalde casus, praktijkgeval of organisatie. Kijk dus altijd of de output geschikt is voor jouw specifieke opdracht.</p>
+      <p>Je kunt AI bijvoorbeeld wel als taalhulp gebruiken. Je kunt dan vragen om feedback op jouw tekst of te controleren op taal- en spelfouten. Zorg ervoor dat het taalgebruik nog wel bij je past en het jouw persoonlijke tekst blijft. Het is niet nodig en ook niet wenselijk om 'dure' taal te gebruiken; je wordt niet beoordeeld op taalgebruik en dit hoeft niet perfect. AI-taal maakt het minder geloofwaardig en onpersoonlijk. Teksten moeten zichtbaar van jou afkomstig zijn en je moet zelf goed weten wat er staat; docenten kunnen hier ten allen tijde naar vragen.</p>
+
+      <h3>Voorwaarden voor gebruik van AI</h3>
+      <p>Gebruik je AI?</p>
+      <ul>
+        <li>Presenteer het niet als je eigen werk; dit is fraude!</li>
+        <li>
+          Zorg dat je vermeldt in de literatuurlijst dat je AI hebt gebruikt, op welke manier en waar:
+          <ul>
+            <li>Geef de prompt die je hebt gebruikt (geen persoonsgegevens of intellectueel eigendom in prompts gebruiken).</li>
+            <li>Geef aan wat AI voor je heeft gegenereerd.</li>
+          </ul>
+        </li>
+        <li>Verifieer de gekregen informatie. De output van AI kan onwaarheden en vooroordelen bevatten. Wees dus kritisch hierop en gebruik aanvullende, (wetenschappelijke) bronnen om de kwaliteit van de informatie te toetsen.</li>
+        <li>Parafraseer (ideeën in eigen woorden uitdrukken) de verkregen informatie (het is jouw werk).</li>
+        <li>Neem alleen de geverifieerde bronnen in de literatuurlijst op. AI is zelf geen bron.</li>
+        <li>Gebruik geen letterlijke teksten die AI voor je schrijft, maar maak er je eigen werk van waarbij je een correcte bronvermelding hanteert (zie <a href="https://auteursrechten.nl/wp-content/uploads/2024/05/De-APA-richtlijnen-uitgelegd-Generatieve-AI-Versie-1.0.pdf">APA richtlijnen: Generatieve AI</a>).</li>
+        <li>Wanneer je de regels overtreedt, maakt de docent hiervan melding bij de Examencommissie vanwege mogelijke fraude. Wanneer fraude wordt vastgesteld door de examencommissie kan dit ernstige gevolgen hebben voor je studievoortgang.</li>
+      </ul>
+
+      <h2>Fraude en plagiaat</h2>
+      <p><em>Artikel 4.11 Fraude en onregelmatigheden</em> De examencommissie stelt vast of er sprake is van fraude of een onregelmatigheid. Onder fraude verstaan we het bewust of onbewust handelen, nalaten, pogen of aanzetten tot gedrag dat het op juiste wijze vormen van een correct en eerlijk oordeel over iemands kennis, inzicht, vaardigheden of (beroeps)houding geheel of gedeeltelijk onmogelijk maakt. Plagiaat is een verschijningsvorm van fraude.</p>
+      <p><em>Artikel 9.2 Plagiaat</em> Onder plagiaat wordt voorts in ieder geval verstaan: (alleen de passages die van toepassing zijn op AI zijn hier opgenomen) a. het gebruikmaken dan wel overnemen van andermans teksten, gegevens of ideeën zonder volledige en correcte bronvermelding; b. het presenteren als eigen werk of eigen gedachten van de structuur dan wel het centrale gedachtegoed uit bronnen van derden, zelfs indien een verwijzing naar andere auteurs is opgenomen. Hieronder kan ook worden verstaan het gebruik van taalmodellen (AI); d. het parafraseren van de inhoud van andermans teksten zonder voldoende bronverwijzingen; h. het overnemen van beeld-, geluids- of testmateriaal, software en programmacodes van anderen zonder verwijzing en dit laten doorgaan voor eigen werk.</p>
+      <p><em>AI gebruik:</em> indien het gebruik van AI wel als hulpmiddel is toegestaan en de student dit proces niet inzichtelijk maakt, zoals expliciet vermeld in de studiehandleiding, dan is dit aanleiding om een vermoeden van fraude te melden bij de examencommissie. Er wordt gesteld dat het, door het handelen van de student, de examinator onmogelijk wordt gemaakt om het kennen en kunnen van de student te beoordelen. De examinator stopt met beoordelen en nodigt de student uit voor een authenticiteitsgesprek. Indien na het gesprek het vermoeden van fraude blijft, dan meldt de examinator dit bij de examencommissie via Osiris Zaak. De examencommissie doet onderzoek en komt tot een besluit.</p>
+
+      <hr>
+      
+      <h1 id="bijlages">Bijlages</h1>
+
+      <h2 id="bijlage-1">Bijlage 1: Stroomschema AI en toetsing</h2>
+      <p><img src="stroomschema-ai-en-toetsing.png" alt="Afbeelding met tekst, schermopname, diagram, Parallel"></p>
+
+      <hr>
+      
+      <h2 id="bijlage-2">Bijlage 2: Rubric - Beoordelingscriteria</h2>
+
+      <h3 id="leeruitkomst-1">Leeruitkomst 1</h3>
+      <table>
+        <thead>
+          <tr>
+            <th colspan="3">Samenwerkingsmindset &amp; eigenaarschap</th>
+          </tr>
+          <tr class="table-subhead">
+            <th colspan="3">De mate waarin de student bij technische én professionele keuzes laat zien dat samenwerken essentieel is voor het bouwen van een goed onderhoudbaar en uitbreidbaar softwareproduct.</th>
+          </tr>
+          <tr class="row-third">
+            <th class="graduation-insufficient">Onvoldoende</th>
+            <th class="graduation-sufficient">Voldoende</th>
+            <th class="graduation-good">Goed</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Maakt technische keuzes die zijn gericht op een snelle oplossing die nu werkt, zonder zichtbaar rekening te houden met gevolgen voor toekomstig gebruik (onderhoud, uitbreiding en technische schuld).</td>
+            <td>Houdt bij technische keuzes rekening met gevolgen voor toekomstig gebruik (onderhoud, uitbreiding en technische schuld) wanneer dit ter sprake komt, maar maakt hierin nog wisselende afwegingen tussen snel afmaken en duurzame oplossingen.</td>
+            <td>Weegt bij technische keuzes bewust de gevolgen voor toekomstig gebruik (onderhoud, uitbreiding en technische schuld) mee en kiest consequent voor duurzame oplossingen boven snel afmaken.</td>
+          </tr>
+          <tr>
+            <td>
+              Maakt professionele keuzes zonder stil te staan bij de impact daarvan op het team of het gezamenlijke resultaat; richt zich vooral op het afronden van de eigen taak ("mijn code werkt"), lost problemen bij voorkeur alleen op.
+              <em>(bijvoorbeeld zelf beslissen in plaats van eerst overleggen, "niet mijn probleem", eigen oplossing doordrukken)</em>
+            </td>
+            <td>
+              Houdt rekening met de impact van eigen professionele keuzes op het team, maar handelt hierin nog wisselend.
+              <em>(bijvoorbeeld overlegt wanneer iemand het aankaart, past soms de eigen oplossing aan voor het team, helpt bij teamproblemen wanneer daarom wordt gevraagd)</em>
+            </td>
+            <td>
+              Maakt professionele keuzes vanuit het teambelang en kiest consequent voor samenwerking om leeropbrengst en het gezamenlijke resultaat te verbeteren.
+              <em>(bijvoorbeeld samen ontwerpen, meedenken, kennis delen)</em>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table>
+        <thead>
+          <tr>
+            <th colspan="3">Dagelijkse afstemming &amp; werkcoördinatie</th>
+          </tr>
+          <tr class="table-subhead">
+            <th colspan="3">De mate waarin de student werk, afspraken en afhankelijkheden expliciet maakt en dagelijks afstemt, zodat het team overzicht houdt en daadwerkelijk samenwerkt aan de gezamenlijke voortgang van het project.</th>
+          </tr>
+          <tr class="row-third">
+            <th class="graduation-insufficient">Onvoldoende</th>
+            <th class="graduation-sufficient">Voldoende</th>
+            <th class="graduation-good">Goed</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Taken en afhankelijkheden worden niet of nauwelijks besproken</td>
+            <td>Bespreekt taken en afhankelijkheden, maar niet altijd expliciet of consequent</td>
+            <td>Bespreekt taken, afspraken en afhankelijkheden zichtbaar en expliciet</td>
+          </tr>
+          <tr>
+            <td>Heeft geen overzicht op voortgang en informeert het team onregelmatig en/of laat over voortgang en evt. knelpunten</td>
+            <td>Houdt zicht op voortgang door op afgesproken momenten te informeren en af te stemmen</td>
+            <td>Houdt zicht op voortgang door dagelijks te informeren, af te stemmen en knelpunten te signaleren vóórdat het problemen worden</td>
+          </tr>
+          <tr>
+            <td>Neemt weinig tot geen initiatief in het maken of bewaken van afspraken over kwaliteit, deadlines of evaluatiemomenten.</td>
+            <td>Draagt bij aan gemaakte afspraken (DoD, deadlines) en houdt zich hier meestal aan</td>
+            <td>Neemt actief initiatief in het maken, concreet maken én bewaken van gedeelde (kwaliteits)afspraken (DoD, deadlines, acceptatiecriteria) en evaluatiemomenten</td>
+          </tr>
+          <tr>
+            <td>Gebruikt tools vooral individueel; werk en voortgang zijn beperkt zichtbaar voor anderen</td>
+            <td>Gebruikt tools om werk zichtbaar te maken voor het team en samen te voegen</td>
+            <td>Gebruikt tools (bijvoorbeeld git) bewust als afstemmingsmiddel door te committen voor anderen, werk transparant te maken en branches, merges en conflicts te begrijpen en functioneel te gebruiken</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table>
+        <thead>
+          <tr>
+            <th colspan="3">Inhoudelijke communicatie &amp; gedeeld begrip</th>
+          </tr>
+          <tr class="table-subhead">
+            <th colspan="3">De mate waarin de student actief bijdraagt aan heldere communicatie en betere teamkeuzes door aandachtig te luisteren, door te vragen bij onduidelijkheden en feedback te gebruiken als kans om samen te leren.</th>
+          </tr>
+          <tr class="row-third">
+            <th class="graduation-insufficient">Onvoldoende</th>
+            <th class="graduation-sufficient">Voldoende</th>
+            <th class="graduation-good">Goed</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Luistert vooral om te reageren of het eigen standpunt te verdedigen. Gebruikt vooral eigen (technische) taal zonder rekening te houden met anderen.</td>
+            <td>Luistert aandachtig en laat anderen uitspreken. Past taalgebruik globaal aan en/of reageert op wat gezegd is, zonder expliciet te vragen of het klopt.</td>
+            <td>Luistert om te begrijpen: vat samen wat hij/zij denkt te begrijpen en vraagt of dat klopt, en past taalgebruik bewust en flexibel aan aan teamleden (technisch ↔ niet-technisch).</td>
+          </tr>
+          <tr>
+            <td>Neemt onduidelijke requirements, afspraken of keuzes aan zonder door te vragen. Werkt verder op basis van eigen aannames.</td>
+            <td>Vraagt om verduidelijking wanneer hij/zij merkt dat requirements/afspraken/keuzes nog niet duidelijk zijn.</td>
+            <td>Vraagt door bij vage requirements/afspraken/keuzes, benoemt wat volgens hem/haar nog onduidelijk of aannemelijk is, en checkt of het team hetzelfde beeld heeft voordat er keuzes worden gemaakt.</td>
+          </tr>
+          <tr>
+            <td>Geeft weinig of vage/algemene feedback, houdt vast aan eigen ideeën of keuzes. Reageert verdedigend op feedback.</td>
+            <td>Geeft feedback wanneer daarom gevraagd wordt en staat open voor feedback. Kan eigen ideeën of keuzes aanpassen na feedback.</td>
+            <td>Vraagt uit eigen initiatief om feedback, vraagt door bij vage feedback en gebruikt deze om eigen keuzes of werkwijze bij te stellen. Geeft feedback respectvol en gedoseerd, alleen wanneer de ander hier open voor staat, en benoemt daarbij ook sterke punten, waardoor het team samen blijft leren en groeien.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table>
+        <thead>
+          <tr>
+            <th colspan="3">Omgaan met verschillen &amp; spanningen</th>
+          </tr>
+          <tr class="table-subhead">
+            <th colspan="3">De mate waarin de student andere perspectieven en emoties dan het eigen herkent, erkent en verkent, hier op een vriendelijke en professionele manier op reageert en door dit gedrag actief bijdraagt om psychologische veiligheid en samenwerking binnen het team te versterken.</th>
+          </tr>
+          <tr class="row-third">
+            <th class="graduation-insufficient">Onvoldoende</th>
+            <th class="graduation-sufficient">Voldoende</th>
+            <th class="graduation-good">Goed</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Blijft vooral in het eigen perspectief. Herkent verschillen in zienswijzen of emoties beperkt of niet. Verkent het perspectief van de ander niet of nauwelijks.</td>
+            <td>Herkent en erkent dat anderen een ander perspectief of andere emoties hebben. Luistert en staat open, maar verkent nog beperkt (stelt weinig verhelderende vragen of vat het perspectief niet samen).</td>
+            <td>Herkent, erkent en verkent actief andere perspectieven en emoties. Stelt verkennende vragen en kan het perspectief van de ander correct en neutraal samenvatten.</td>
+          </tr>
+          <tr>
+            <td>Vermijdt spanning of emotionele signalen, benoemt ze niet of vat ze persoonlijk op. Reageert terugtrekkend, defensief of escalerend. Inhoud en persoon lopen door elkaar.</td>
+            <td>Benoemt spanning of emotionele signalen vooral wanneer ze duidelijk aanwezig zijn. Probeert respectvol te reageren, maar handelt hierin nog wisselend. Scheidt inhoud en persoon niet altijd expliciet.</td>
+            <td>Maakt spanning en emotionele signalen tijdig bespreekbaar op een rustige, vriendelijke en professionele manier. Scheidt inhoud en persoon bewust en reageert niet vermijdend of defensief.</td>
+          </tr>
+          <tr>
+            <td>Laat weinig ruimte voor anderen om hun perspectief te delen (bv. domineert, onderbreekt, of sluit discussies snel af) wat kan leiden tot onveiligheid of vastlopen in de samenwerking.</td>
+            <td>Laat anderen aan het woord en staat open voor inbreng, maar nodigt anderen nog beperkt actief uit of laat kansen liggen om vanuit meerdere perspectieven het gesprek aan te gaan en zo beter onderbouwde keuzes te maken.</td>
+            <td>Creëert actief ruimte voor anderen om hun perspectief te delen door anderen expliciet uit te nodigen, stiltes te laten vallen en dominante stemmen te begrenzen, waardoor teamleden zichtbaar vaker hun ideeën, twijfels of zorgen uitspreken, meerdere perspectieven daadwerkelijk worden gehoord en het team beter onderbouwde keuzes kan maken, waardoor verschillen bijdragen aan gezamenlijke voortgang in plaats van vastlopen.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table>
+        <thead>
+          <tr>
+            <th colspan="3">Reflectie &amp; ontwikkeling</th>
+          </tr>
+          <tr class="table-subhead">
+            <th colspan="3">De mate waarin de student zijn eigen gedrag, gedachten, gevoelens en overtuigingen oordeelvrij en kritisch onderzoekt vanuit verschillende perspectieven, feedback van anderen hierin verweeft en concrete en realistische voornemens formuleert vanuit het nieuwe inzicht over zichzelf voor toekomstige projectsamenwerkingen.</th>
+          </tr>
+          <tr class="row-third">
+            <th class="graduation-insufficient">Onvoldoende</th>
+            <th class="graduation-sufficient">Voldoende</th>
+            <th class="graduation-good">Goed</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>De student onderzoekt het eigen handelen beperkt of eenzijdig: de reflectie blijft vooral beschrijvend of beoordelend, met weinig aandacht voor gedachten, gevoelens of overtuigingen.</td>
+            <td>De student onderzoekt het eigen gedrag en staat stil bij gedachten en gevoelens, met een overwegend onderzoekende houding, maar is nog deels oordelend en/of mist diepgang in de kritische analyse.</td>
+            <td>De student onderzoekt eigen gedrag, gedachten, gevoelens en overtuigingen op een open, oordeelvrije en kritische manier vanuit meerdere perspectieven.</td>
+          </tr>
+          <tr>
+            <td>Andere perspectieven of feedback van anderen worden niet of nauwelijks meegenomen.</td>
+            <td>Andere perspectieven of feedback van anderen worden benoemd maar niet, maar slechts beperkt of gedeeltelijk verwerkt in de reflectie.</td>
+            <td>Feedback van anderen wordt actief, zichtbaar en betekenisvol verweven in de reflectie.</td>
+          </tr>
+          <tr>
+            <td>Voornemens voor toekomstige samenwerking ontbreken of blijven vaag en zijn niet concreet gekoppeld aan het eigen leerpunt.</td>
+            <td>De student formuleert voornemens voor toekomstige projectsamenwerkingen die logisch voortkomen uit het inzicht, maar nog beperkt zijn uitgewerkt of geconcretiseerd.</td>
+            <td>De student formuleert concrete, realistische en toepasbare voornemens vanuit het nieuwe inzicht over zichzelf voor toekomstige projectsamenwerkingen.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <hr>
+      
+      <h3 id="leeruitkomst-2">Leeruitkomst 2</h3>
+      <table>
+        <thead>
+          <tr>
+            <th colspan="3">Analyseren</th>
+          </tr>
+          <tr class="table-subhead">
+            <th colspan="3">De mate van waarin de student een volledige, gestructureerde en professioneel uitgevoerde requirementsanalyse oplevert, daarbij aantoonbaar en effectief afstemt met de opdrachtgever, en heldere, samenhangende en goed onderbouwde argumentaties hanteert die bijdragen aan een gedeeld en verdiept begrip van het probleem.</th>
+          </tr>
+          <tr class="row-third">
+            <th class="graduation-insufficient">Onvoldoende</th>
+            <th class="graduation-sufficient">Voldoende</th>
+            <th class="graduation-good">Goed</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>De requirementsanalyse is onvolledig of onvoldoende uitgewerkt.</td>
+            <td>De requirementsanalyse is correct en voldoende uitgewerkt.</td>
+            <td>De requirementsanalyse is grondig, gestructureerd en professioneel uitgevoerd.</td>
+          </tr>
+          <tr>
+            <td>Er is weinig afstemming zichtbaar met de opdrachtgever.</td>
+            <td>Er is aantoonbare afstemming met de opdrachtgever.</td>
+            <td>Afstemming met de opdrachtgever is duidelijk aantoonbaar.</td>
+          </tr>
+          <tr>
+            <td>Onderbouwingen zijn oppervlakkig of inconsistent, waardoor het begrip van het probleem beperkt blijft.</td>
+            <td>Onderbouwingen zijn logisch en begrijpelijk, maar missen soms diepgang of samenhang.</td>
+            <td>Onderbouwingen zijn helder, samenhangend en tonen inzicht dat bijdraagt aan een gedeeld probleembegrip.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table>
+        <thead>
+          <tr>
+            <th colspan="3">Adviseren</th>
+          </tr>
+          <tr class="table-subhead">
+            <th colspan="3">De mate van waarin de student voor elke technologische keuze systematisch en onderbouwd meerdere zinvolle alternatieven afweegt op basis van requirements, deze keuzes helder en overtuigend verantwoordt binnen het team, en adviezen formuleert die goed onderbouwd, passend bij de requirements en afgestemd op de projectcontext zijn.</th>
+          </tr>
+          <tr class="row-third">
+            <th class="graduation-insufficient">Onvoldoende</th>
+            <th class="graduation-sufficient">Voldoende</th>
+            <th class="graduation-good">Goed</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Alternatieven worden niet of nauwelijks overwogen en keuzes komen voort uit voorkeuren.</td>
+            <td>Er is een beperkte vergelijking van alternatieven met hier en daar ad-hoc criteria.</td>
+            <td>Er wordt systematisch een afweging gemaakt tussen meerdere zinvolle alternatieven op basis van requirements.</td>
+          </tr>
+          <tr>
+            <td>De argumentatie is afwezig of onduidelijk, wat de samenwerking binnen het team belemmert.</td>
+            <td>De argumentatie is begrijpelijk voor het team, maar mist soms diepgang of volledigheid.</td>
+            <td>De argumentatie is overtuigend verantwoord en toont gezamenlijke besluitvorming binnen het team.</td>
+          </tr>
+          <tr>
+            <td>Adviezen zijn onvolledig, niet passend bij de requirements of onvoldoende toegelicht.</td>
+            <td>Adviezen sluiten aan bij de requirements en bevatten een redelijke onderbouwing.</td>
+            <td>Adviezen zijn goed onderbouwd, helder gecommuniceerd en afgestemd op de projectcontext.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table>
+        <thead>
+          <tr>
+            <th colspan="3">Ontwerpen</th>
+          </tr>
+          <tr class="table-subhead">
+            <th colspan="3">De mate van waarin de student een duidelijke, consistente en goed onderbouwde softwarearchitectuur uitwerkt, correcte en effectieve diagrammen inzet ter ondersteuning van de communicatie, en een plan maakt om testen gestructureerd uit te voeren op een wijze die volledig herleidbaar is naar de requirements.</th>
+          </tr>
+          <tr class="row-third">
+            <th class="graduation-insufficient">Onvoldoende</th>
+            <th class="graduation-sufficient">Voldoende</th>
+            <th class="graduation-good">Goed</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>De softwarearchitectuur is beperkt uitgewerkt of bevat inconsistenties en fouten.</td>
+            <td>De softwarearchitectuur is voldoende uitgewerkt en grotendeels consistent.</td>
+            <td>De softwarearchitectuur is duidelijk, consistent en goed onderbouwd.</td>
+          </tr>
+          <tr>
+            <td>Diagrammen bevatten fouten of onduidelijkheden en helpen de communicatie nauwelijks.</td>
+            <td>Diagrammen zijn grotendeels juist en bruikbaar voor communicatie binnen het team.</td>
+            <td>Diagrammen zijn correct, volledig en effectief ingezet als communicatiemiddel.</td>
+          </tr>
+          <tr>
+            <td>Testen is afwezig of nauwelijks gekoppeld aan de requirements.</td>
+            <td>Testen is gekoppeld aan een aantal requirements, maar is niet volledig.</td>
+            <td>Testen is volledig, gestructureerd en herleidbaar naar de requirements.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table>
+        <thead>
+          <tr>
+            <th colspan="3">Realiseren</th>
+          </tr>
+          <tr class="table-subhead">
+            <th colspan="3">De mate van waarin de student een professioneel opgebouwde en goed geabstraheerde softwarestructuur realiseert, consistente en leesbare code schrijft die voor alle teamleden onderhoudbaar is, en testing volledig en betrouwbaar inzet ter ondersteuning van verdere ontwikkeling.</th>
+          </tr>
+          <tr class="row-third">
+            <th class="graduation-insufficient">Onvoldoende</th>
+            <th class="graduation-sufficient">Voldoende</th>
+            <th class="graduation-good">Goed</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>De softwarestructuur is onvoldoende geabstraheerd en is daarmee moeilijk onderhoudbaar.</td>
+            <td>De softwarestructuur is logisch opgebouwd en grotendeels onderhoudbaar.</td>
+            <td>De softwarestructuur is professioneel opgezet, goed geabstraheerd en duidelijk onderhoudbaar.</td>
+          </tr>
+          <tr>
+            <td>Code is lastig te begrijpen of aan te passen door andere teamleden.</td>
+            <td>Code is begrijpelijk, maar bevat inconsistenties of verbeterpunten.</td>
+            <td>Code is consistent, leesbaar en daardoor onderhoudbaar door alle teamleden.</td>
+          </tr>
+          <tr>
+            <td>Testing ontbreekt of is minimaal, wat risico's oplevert voor verdere ontwikkeling.</td>
+            <td>Testing is aanwezig en functioneel, maar niet volledig of systematisch.</td>
+            <td>Testing is volledig en betrouwbaar, waardoor teamleden effectief verder kunnen werken.</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+  </body>
+</html>
